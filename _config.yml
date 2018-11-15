@@ -1,6 +1,6 @@
 title: alexford.io
 description: >- # this means to ignore newlines until "baseurl:"
-  A web developer in Columbus Ohio, working mostly in Rails, sharing things he learns and finds interesting.
+  A web developer/designer/musician in Columbus Ohio, working mostly in Rails, sharing things he learns and finds interesting.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: alexford
