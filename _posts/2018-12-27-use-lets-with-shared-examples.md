@@ -169,7 +169,7 @@ end
 # ...snip
 {% endhighlight %}
 
-This works because `let(:first_name) { "Foo" }` simply defines a (memoized) method called `first_name`wri, and `send` (part of Ruby itself) can be used to call methods in the current scope by their symbol name. RSpec won't complain about passing symbols as arguments, the Shared Example evaluates the helpers, and everything is green! 💯
+This works because `let(:first_name) { "Foo" }` simply defines a (memoized) method called `first_name`, and `send` (part of Ruby itself) can be used to call methods in the current scope by their symbol name. RSpec won't complain about passing symbols as arguments, the Shared Example evaluates the helpers, and everything is green! 💯
 
 **This, too, is not pretty, but I much prefer it to adding an extra `let`.**
 
