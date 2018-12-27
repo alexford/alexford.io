@@ -42,7 +42,9 @@ In the opinion of many (myself included), this is perfectly fine and DRY enough.
 {% highlight ruby %}
 describe User do
   shared_examples "combines" do |string, other_string|
-    expect(subject).to eq "#{string} #{other_string}"
+    it "combines the two strings" do
+      expect(subject).to eq "#{string} #{other_string}"
+    end
   end
 
   describe "#full_name" do
@@ -133,7 +135,9 @@ First, you could define an additional `let` helper, something like the below, to
 {% highlight ruby %}
 # snip...
 shared_examples "combines"
-  expect(subject).to eq "#{to_be_combined[0]} #{to_be_combined[1]}"
+  it "combines the two strings" do
+    expect(subject).to eq "#{to_be_combined[0]} #{to_be_combined[1]}"
+  end
 end
 
 describe "#full_name" do
@@ -155,7 +159,9 @@ Here is _a way_ to make this work, which I have used with success when stuck in 
 {% highlight ruby %}
 # snip...
 shared_examples "combines" |string_identifier, other_string_identifier| # Don't love those names
-  expect(subject).to eq "#{send(string_identifier)} #{send(other_string_identifier)}"
+  it "combines the two strings" do
+    expect(subject).to eq "#{send(string_identifier)} #{send(other_string_identifier)}"
+  end
 end
 
 describe "#full_name" do
