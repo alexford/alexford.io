@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "Using lets as Arguments for Shared Examples"
-date:   2018-12-27 00:00:00 -0500
+date:   2018-12-27 12:00:00 -0500
 categories: [RSpec, Ruby]
+description: "RSpec: Lazy-loading let helpers in Shared Examples"
 ---
 Like many, I often use RSpec's [Shared Examples](https://relishapp.com/rspec/rspec-core/docs/example-groups/shared-examples) to help DRY my tests and better communicate intent, especially when the Thing™ under test has side effects or many possible inputs.
 
